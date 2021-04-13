@@ -70,12 +70,15 @@
                   <a class="nav-link" href="http://localhost/web/Diem_danh">Điểm danh</a>
                 </li>
                 <li class="nav-item" href="#">
-                  <a class="nav-link" href="http://localhost/web/Lien_he">Liên Hệ</a>
+                  <a class="nav-link" href="http://localhost/web/thongbaonguyco">Thông Báo Nguy Cơ</a>
                 </li>
                 <li class="nav-item" href="#">
-                  <a class="nav-link" href="test.html">test</a>
+                  <a class="nav-link" href="http://localhost/web/Lien_he">Liên Hệ</a>
                 </li>
-                <li class="last"><a href="#"><img src="images/search-icon.png" alt="icon"></a></li>
+                <!-- <li class="nav-item" href="#">
+                  <a class="nav-link" href="test.html">test</a>
+                </li> -->
+                <!-- <li class="last"><a href="#"><img src="images/search-icon.png" alt="icon"></a></li> -->
               </ul>
             </div>
           </nav>
@@ -94,23 +97,23 @@
           <h1>Thông tin cá nhân</h1>
           <div style="width:50%; float:left;">
             <h4>Họ tên</h4>
-            <input name="ten" type="text" />
+            <input required name="ten" type="text" />
           </div>
           <div style="width:50%; float:left;">
             <h4>Mã sinh viên</h4>
-            <input name="masv" type="text" />
+            <input required name="masv" type="text" />
           </div>
           <div style="width:50%; float:left;">
             <h4>Lớp niên chế</h4>
-            <input name="lop" type="text" />
+            <input required name="lop" type="text" />
           </div>
           <div style="width:50%; float:left;">
             <h4>Số điện thoại</h4>
-            <input name="sdt" type="text" />
+            <input required name="sdt" type="text" />
           </div>
           <!-- <h4>Giới tính</h4> -->
           <div class="form-group form-inline box-gaden " style="width:50%;float:left;"> <label>Giới tính <em style="line-height: 1">(*)</em></label>
-            <select name="gioitinh">
+            <select required name="gioitinh">
               <option value="">Chọn</option>
               <option value="Nam" <?= set_select('gioitinh', 'Nam') ?>>Nam</option>
               <option value="Nữ" <?= set_select('gioitinh', 'Nữ') ?>>Nữ</option>
@@ -128,7 +131,7 @@
           <!-- <input type="checkbox" name="gioitinh" /> -->
           <!-- <h5>năm sinh</h5> -->
           <div style="float: left;width: 50%;" class="form-group form-inline gender-box "> <label>Năm sinh <em style="line-height: 1">(*)</em></label>
-            <select name="namsinh">
+            <select required name="namsinh">
               <option value="">Chọn</option>
               <option value="2005" <?= set_select('namsinh', '2005') ?>>2005</option>
               <option value="2004" <?= set_select('namsinh', '2004') ?>>2004</option>
@@ -148,7 +151,7 @@
 
         <div style="width:30%;float:left"> <label>Tỉnh/Thành Phố<em style="line-height: 1">(*)</em></label>
 
-          <select style=" background-color: white;" id="province" name="province" class="form-control city">
+          <select required style=" background-color: white;" id="province" name="province" class="form-control city">
             <option value="">Chọn Thành Phố</option>
             <?php
             foreach ($province as $row) {
@@ -157,32 +160,32 @@
           </select>
         </div>
         <div style="width:35%;float:left"> <label>Quận/Huyện<em style="line-height: 1">(*)</em></label>
-          <select style=" background-color: white;" id="district" name="district" class="form-control city">
+          <select required style=" background-color: white;" id="district" name="district" class="form-control city">
             <option value="">Chọn Quận/Huyện</option>
           </select>
         </div>
 
         <div style="width:35%;float:left"> <label>Xã/Phường<em style="line-height: 1">(*)</em></label>
-          <select style=" background-color: white;" id="ward" name="ward" class="form-control city">
+          <select required style=" background-color: white;" id="ward" name="ward" class="form-control city">
             <option value="">Chọn Xã/Phường</option>
           </select>
         </div>
 
         <div style=" float:left;width:100%;">
           <h4>Số nhà, phố, tổ dân phố/thôn/đội (*)</h4>
-          <input name="diachi" type="text" />
+          <input required name="diachi" type="text" />
         </div>
-        <div style=" float:left;width:50%;">
+        <!-- <div style=" float:left;width:50%;">
           <h4 style=" float:left;width:50%;">Điện thoại</h4>
-          <input name="sdt" type="text" />
-        </div>
-        <div style=" float:left;width:50%;">
+          <input required name="sdt" type="text" />
+        </div> -->
+        <div style=" float:left;width:100%;">
           <h4 style=" float:left;width:50%;">Email</h4>
-          <input name="email" type="text" />
+          <input required name="email" type="text" />
         </div>
         <div style=" float:left;width:100%;">
           <h4>Trong vòng 14 ngày qua, anh chị có đến tỉnh/thành phố, quốc gia/vùng lãnh thổ nào (Có thể đi qua nhiều nơi) (*)</h4>
-          <input name="dilai" type="text" />
+          <input style="height: 50px;" required name="dilai" type="text" />
         </div>
     </div>
     <div style="padding: 20px; 	border: 1px solid #072833;">

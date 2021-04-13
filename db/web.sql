@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 13, 2021 lúc 10:28 AM
+-- Thời gian đã tạo: Th4 13, 2021 lúc 04:02 PM
 -- Phiên bản máy phục vụ: 10.4.17-MariaDB
 -- Phiên bản PHP: 8.0.2
 
@@ -811,7 +811,36 @@ CREATE TABLE `khaibao` (
 --
 
 INSERT INTO `khaibao` (`id`, `dilai`, `sot`, `ho`, `khotho`, `viemphoi`, `dauhong`, `metmoi`, `benh`, `nuocngoai`, `bieuhien`, `gan`, `mau`, `phoi`, `than`, `tim`, `huyetap`, `suygiam`, `gheptang`, `tieuduong`, `ungthu`, `thaiky`, `idps`) VALUES
-(2, 'khong', 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, NULL);
+(2, 'khong', 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, NULL),
+(3, 'khong', 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `nguyco`
+--
+
+CREATE TABLE `nguyco` (
+  `idnguyco` int(11) NOT NULL,
+  `ten` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `masv` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `lop` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `sdt` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `diachi` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `tinhthanhpho` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `quanhuyen` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `xaphuong` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `macbenh` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `tiepxuc` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `noidung` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `nguyco`
+--
+
+INSERT INTO `nguyco` (`idnguyco`, `ten`, `masv`, `lop`, `sdt`, `diachi`, `tinhthanhpho`, `quanhuyen`, `xaphuong`, `macbenh`, `tiepxuc`, `noidung`) VALUES
+(1, 'tran viet trung', '20a4040161', 'k20HTTTA', '0332764681', 'abc', '83', '835', '29053', '1', '1', NULL);
 
 -- --------------------------------------------------------
 
@@ -841,7 +870,8 @@ CREATE TABLE `pesson` (
 --
 
 INSERT INTO `pesson` (`idps`, `loaips`, `ten`, `lop`, `sdt`, `email`, `diachi`, `xaphuong`, `quanhuyen`, `tinhthanhpho`, `gioitinh`, `masv`, `malop`, `namsinh`) VALUES
-(1, NULL, 'tran viet trung', 'k20HTTTA', '0332764681', 'trungtran1906@gmail.com', 'abc', '09637', '271', '01', 'Nam', '20a4040161', NULL, '1999');
+(1, NULL, 'tran viet trung', 'k20HTTTA', '0332764681', 'trungtran1906@gmail.com', 'abc', '09637', '271', '01', 'Nam', '20a4040161', NULL, '1999'),
+(2, NULL, 'quang huy', 'k20HTTTA', '0332764681', 'trungtran.mis@gmail.com', 'abc', '09619', '271', '01', 'Nữ', '20a12314123', NULL, '2005');
 
 -- --------------------------------------------------------
 
@@ -973,14 +1003,14 @@ CREATE TABLE `tintuc` (
 --
 
 INSERT INTO `tintuc` (`idtintuc`, `tieude`, `mota`, `noidung`, `pic`, `ngaytao`, `luotdoc`, `trangthai`, `tacgia`) VALUES
-(1, 'Bộ Y tế: 63 tỉnh, thành hỏa tốc lập danh sách 10 nhóm ưu tiên tiêm vắc xin COVID-19 miễn phí bai viet 1', 'Thứ trưởng Bộ Y tế Đỗ Xuân Tuyên vừa ký công văn hỏa tốc số 2447/BYT-DP về việc rà soát, thống kê đối tượng ưu tiên tiêm và tiêm miễn phí vắc xin phòng COVID-19. Theo đó, Bộ Y tế yêu cầu Sở Y tế 63 tỉnh, thành phố khẩn trương lập danh sách 10 nhóm đối tượng ưu tiên được tiêm miễn phí vắc xin COVID-19 trên địa bàn theo đúng tinh thần của Nghị quyết 21/NQ-21 của Chính phủ và thông báo số 47/TB-VPCP của Văn phòng Chính phú.', 'bv1.jpg', 'bv1.jpg', '2021-04-08 00:00:00', NULL, NULL, NULL),
-(2, '\"Biến\" phòng cách ly thành phòng đẻ để cứu 2 sản phụ ', 'Sáng 8/5, Bệnh viện Hữu nghị Đa khoa Nghệ An (Bệnh viện HNĐK Nghệ An) cho biết, vừa cấp cứu Sản khoa tối khẩn cho hai sản phụ trong trong khu cách ly ở Trung tâm bệnh nhiệt đới.\r\n\r\nCụ thể, 10h30 ngày 7/5, các bác sĩ, nữ hộ sinh khoa Sản và Trung tâm bệnh nhiệt đới đã đỡ đẻ thành công cho một sản phụ đang trong thời gian cách ly tại đây. Sản phụ tên Đ.N.A. được cách ly ngay sau khi trở về từ Lào bằng xe cấp cứu vào ngày 6/5.\r\n\r\nVào tháng 2/2020, chị A. sang thủ đô Viêng Chăn (Lào) thăm chị gái và không thể về nước sớm do dịch COVID-19. Đến đầu tháng 5/2020, khi mang thai ở tuần 37, chị A. đến thăm khám tại Bệnh viện Viêng Chăn và được chuyển cấp cứu về Việt Nam. Ngay khi về nước, chị A. được nhập viện theo dõi cách ly tại Trung tâm Bệnh nhiệt đới (Bệnh viện HNĐK Nghệ An) với chẩn đoán mang thai con đầu gần sinh. ', 'bv2.jpg', 'bv2.jpg', '2021-04-08 00:00:00', NULL, NULL, NULL),
-(3, '\"Bỏ phố về quê\" để tránh COVID-19 là phản khoa học, phản tác dụng ', 'Tính đến đêm 8/3, tại Việt Nam đã có 14 ca mắc mới COVID-19 sau khi chúng ta đã điều trị thành công cho 16 ca và duy trì gần 1 tháng không có trường hợp nhiễm thêm. \r\n\r\nDiễn biến này khiến nhiều người dân lo lắng thái quá. Không ít người dân ra siêu thị mua đồ tích trữ dù nguồn hàng nhu yếu phẩm hiện tại của Việt Nam là đang dư thừa. Thậm chí, một số gia đình còn di chuyển đến nơi khác để tránh dịch.\r\n\r\nTrao đổi với PV Báo Gia đình & Xã hội, PGS.TS Trần Đắc Phu - nguyên Cục trưởng Cục Y tế dự phòng, Cố vấn Trung tâm Đáp ứng khẩn cấp sự kiện y tế công cộng Việt Nam hoàn toàn không đồng tình với \"cách chống dịch\" này. Ông kêu gọi người dân không nên di tản. Bởi di tản không phải là cách phòng, chống dịch an toàn. ', 'bc3.jpg', 'bc3.jpg', '2021-04-08 00:00:00', NULL, NULL, NULL),
-(4, '\"Cách biệt xã hội\" - khái niệm mới nên biết nếu muốn an toàn thời COVID-19 ', 'Theo PGS.TS Trần Đắc Phu, trong giai đoạn dịch COVID-19 có khả năng lây lan trong cộng đồng thì người dân cần “cách biệt xã hội”.', 'bv4.png', 'bv4.png', '2021-04-08 00:00:00', NULL, NULL, NULL),
-(5, '\"Chia lửa\" tại chung cư HH01B - KĐT Thanh Hà, nơi phát hiện 2 vợ chồng nhiễm COVID-19 ', 'Rất nhiều món quà vật chất, tinh thần từ cư dân, cộng đồng, chính quyền địa phương gửi đến hàng trăm người đang được cách ly y tế tại tòa HH01B – KĐT Thanh Hà trong những ngày qua.', 'bv5.jpg', 'bv5.jpg', '2021-04-09 00:00:00', NULL, NULL, NULL),
-(6, 'Phát hiện 9 ca mắc COVID-19 nhập cảnh, có 2 mẹ con ở Hưng Yên ', ' Các ca bệnh mới được phát hiện đều là các ca được cách ly ngay sau khi nhập cảnh tại Hưng Yên, Quảng Nam, Đà Nẵng, Bắc Giang và TP. Hồ Chí Minh.', 'bv6.jpg', 'bv6.jpg', '2021-04-09 00:00:00', NULL, NULL, NULL),
-(7, 'Thêm 1 ca mắc COVID-19 mới; Quảng Ninh phê duyệt kế hoạch tiêm vaccine đợt 2 ', 'Tuần sau, Quảng Ninh bắt đầu tiêm vaccine COVID-19 đợt 2, tỉnh này được Bộ Y tế phân bổ 9.000 liều AstraZeneca.\r\n\r\nBộ Y tế sáng 9/4 cho biết, 12 giờ đã qua phát hiện thêm 1 ca mắc mới (BN2669) được cách ly ngay sau khi nhập cảnh tại Bắc Ninh. \r\n\r\nĐó là bệnh nhân nam, 55 tuổi, công dân Việt Nam, địa chỉ tại huyện Đức Thọ, tỉnh Hà Tĩnh. Ngày 31/3, bệnh nhân từ Angola nhập cảnh Sân bay Vân Đồn trên chuyến bay VN88 và được cách ly ngay sau khi nhập cảnh tại tỉnh Bắc Ninh. ', 'bv7.png', 'bv7.png', '2021-04-09 00:00:00', NULL, NULL, NULL),
-(8, 'Hà Nội xét nghiệm SARS-CoV-2 cho hơn 26.000 nhân viên y tế ', 'Ngành y tế Hà Nội sẽ triển khai xét nghiệm SARS-CoV-2 cho khoảng 26.040 người là toàn bộ nhân viên y tế làm việc tại các cơ sở y tế công lập trực thuộc....\r\n\r\nSở Y tế Hà Nội vừa tổ chức hội nghị triển khai Kế hoạch xét nghiệm sàng lọc virus SARS-CoV-2 cho nhân viên y tế và người bệnh tại các bệnh viện công lập trực thuộc và triển khai kế hoạch công tác y tế phục vụ bầu cử đại biểu Quốc hội khóa XV, đại biểu hội đồng nhân dân các cấp nhiệm kỳ 2021 - 2026.\r\n\r\nTheo kế hoạch, ngành y tế triển khai xét nghiệm SARS-CoV-2 cho khoảng 26.040 người là toàn bộ nhân viên y tế làm việc tại các cơ sở y tế công lập trực thuộc và người bệnh tại các khoa: cấp cứu, hồi sức cấp cứu, hồi sức tích cực, thận nhân tạo, lão khoa, ung thư, tim mạch, 30% người bệnh điều trị nội trú của các khoa còn lại (xét nghiệm ngẫu nhiên). Thời gian thực hiện xét nghiệm được chia thành 3 đợt.', 'bv8.jpg', 'bv8.jpg', '2021-04-09 00:00:00', NULL, NULL, NULL);
+(9, 'Bộ Y tế: 63 tỉnh, thành hỏa tốc lập danh sách 10 nhóm ưu tiên tiêm vắc xin COVID-19 miễn phí bai viet 1', 'Thứ trưởng Bộ Y tế Đỗ Xuân Tuyên vừa ký công văn hỏa tốc số 2447/BYT-DP về việc rà soát, thống kê đối tượng ưu tiên tiêm và tiêm miễn phí vắc xin phòng COVID-19. Theo đó, Bộ Y tế yêu cầu Sở Y tế 63 tỉnh, thành phố khẩn trương lập danh sách 10 nhóm đối tượng ưu tiên được tiêm miễn phí vắc xin COVID-19 trên địa bàn theo đúng tinh thần của Nghị quyết 21/NQ-21 của Chính phủ và thông báo số 47/TB-VPCP của Văn phòng Chính phú.', NULL, 'bv1.jpg', '2021-04-13 16:49:16', NULL, NULL, NULL),
+(10, '\"Biến\" phòng cách ly thành phòng đẻ để cứu 2 sản phụ', 'Sáng 8/5, Bệnh viện Hữu nghị Đa khoa Nghệ An (Bệnh viện HNĐK Nghệ An) cho biết, vừa cấp cứu Sản khoa tối khẩn cho hai sản phụ trong trong khu cách ly ở Trung tâm bệnh nhiệt đới. Cụ thể, 10h30 ngày 7/5, các bác sĩ, nữ hộ sinh khoa Sản và Trung tâm bệnh nhiệt đới đã đỡ đẻ thành công cho một sản phụ đang trong thời gian cách ly tại đây. Sản phụ tên Đ.N.A. ', NULL, 'bv2.jpg', '2021-04-13 16:49:16', NULL, NULL, NULL),
+(11, '\"Bỏ phố về quê\" để tránh COVID-19 là phản khoa học, phản tác dụng', 'Tính đến đêm 8/3, tại Việt Nam đã có 14 ca mắc mới COVID-19 sau khi chúng ta đã điều trị thành công cho 16 ca và duy trì gần 1 tháng không có trường hợp nhiễm thêm. Diễn biến này khiến nhiều người dân lo lắng thái quá. Không ít người dân ra siêu thị mua đồ tích trữ dù nguồn hàng nhu yếu phẩm hiện tại của Việt Nam là đang dư thừa.', NULL, 'bv3.jpg', '2021-04-13 16:49:16', NULL, NULL, NULL),
+(12, '\"Cách biệt xã hội\" - khái niệm mới nên biết nếu muốn an toàn thời COVID-19', 'Theo PGS.TS Trần Đắc Phu, trong giai đoạn dịch COVID-19 có khả năng lây lan trong cộng đồng thì người dân cần “cách biệt xã hội”.', NULL, 'bv4.png', '2021-04-13 16:49:16', NULL, NULL, NULL),
+(13, '\"Chia lửa\" tại chung cư HH01B - KĐT Thanh Hà, nơi phát hiện 2 vợ chồng nhiễm COVID-19', 'Rất nhiều món quà vật chất, tinh thần từ cư dân, cộng đồng, chính quyền địa phương gửi đến hàng trăm người đang được cách ly y tế tại tòa HH01B – KĐT Thanh Hà trong những ngày qua.', NULL, 'bv5.jpg', '2021-04-13 16:49:16', NULL, NULL, NULL),
+(14, '\r\nPhát hiện 9 ca mắc COVID-19 nhập cảnh, có 2 mẹ con ở Hưng Yên', 'Các ca bệnh mới được phát hiện đều là các ca được cách ly ngay sau khi nhập cảnh tại Hưng Yên, Quảng Nam, Đà Nẵng, Bắc Giang và TP. Hồ Chí Minh.', NULL, 'bv6.jpg', '2021-04-13 16:49:16', NULL, NULL, NULL),
+(15, 'Thêm 1 ca mắc COVID-19 mới; Quảng Ninh phê duyệt kế hoạch tiêm vaccine đợt 2', 'Tuần sau, Quảng Ninh bắt đầu tiêm vaccine COVID-19 đợt 2, tỉnh này được Bộ Y tế phân bổ 9.000 liều AstraZeneca. Bộ Y tế sáng 9/4 cho biết, 12 giờ đã qua phát hiện thêm 1 ca mắc mới (BN2669) được cách ly ngay sau khi nhập cảnh tại Bắc Ninh. Đó là bệnh nhân nam, 55 tuổi, công dân Việt Nam, địa chỉ tại huyện Đức Thọ, tỉnh Hà Tĩnh.', NULL, 'bv7.png', '2021-04-13 16:49:16', NULL, NULL, NULL),
+(16, 'Hà Nội xét nghiệm SARS-CoV-2 cho hơn 26.000 nhân viên y tế', 'Ngành y tế Hà Nội sẽ triển khai xét nghiệm SARS-CoV-2 cho khoảng 26.040 người là toàn bộ nhân viên y tế làm việc tại các cơ sở y tế công lập trực thuộc.... Sở Y tế Hà Nội vừa tổ chức hội nghị triển khai Kế hoạch xét nghiệm sàng lọc virus SARS-CoV-2 cho nhân viên y tế và người bệnh tại các bệnh viện công lập trực thuộc và triển khai kế hoạch công tác y tế phục vụ bầu cử đại biểu Quốc hội khóa XV, ', NULL, 'bv8.jpg', '2021-04-13 16:49:16', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -12215,6 +12245,12 @@ ALTER TABLE `khaibao`
   ADD KEY `khaibao_pesson_idps_fk` (`idps`);
 
 --
+-- Chỉ mục cho bảng `nguyco`
+--
+ALTER TABLE `nguyco`
+  ADD PRIMARY KEY (`idnguyco`);
+
+--
 -- Chỉ mục cho bảng `pesson`
 --
 ALTER TABLE `pesson`
@@ -12246,19 +12282,25 @@ ALTER TABLE `diemdanh`
 -- AUTO_INCREMENT cho bảng `khaibao`
 --
 ALTER TABLE `khaibao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT cho bảng `nguyco`
+--
+ALTER TABLE `nguyco`
+  MODIFY `idnguyco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `pesson`
 --
 ALTER TABLE `pesson`
-  MODIFY `idps` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idps` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `tintuc`
 --
 ALTER TABLE `tintuc`
-  MODIFY `idtintuc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idtintuc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT cho bảng `user`

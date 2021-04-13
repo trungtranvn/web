@@ -70,12 +70,15 @@
                   <a class="nav-link" href="http://localhost/web/Diem_danh">Điểm danh</a>
                 </li>
                 <li class="nav-item" href="#">
-                  <a class="nav-link" href="http://localhost/web/Lien_he">Liên Hệ</a>
+                  <a class="nav-link" href="http://localhost/web/thongbaonguyco">Thông Báo Nguy Cơ</a>
                 </li>
                 <li class="nav-item" href="#">
-                  <a class="nav-link" href="test.html">test</a>
+                  <a class="nav-link" href="http://localhost/web/Lien_he">Liên Hệ</a>
                 </li>
-                <li class="last"><a href="#"><img src="images/search-icon.png" alt="icon"></a></li>
+                <!-- <li class="nav-item" href="#">
+                  <a class="nav-link" href="test.html">test</a>
+                </li> -->
+                <!-- <li class="last"><a href="#"><img src="images/search-icon.png" alt="icon"></a></li> -->
               </ul>
             </div>
           </nav>

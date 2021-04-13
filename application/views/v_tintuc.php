@@ -66,12 +66,15 @@
                                     <a class="nav-link" href="http://localhost/web/Diem_danh">Điểm danh</a>
                                 </li>
                                 <li class="nav-item" href="#">
-                                    <a class="nav-link" href="http://localhost/web/Lien_he">Liên Hệ</a>
+                                    <a class="nav-link" href="http://localhost/web/thongbaonguyco">Thông Báo Nguy Cơ</a>
                                 </li>
                                 <li class="nav-item" href="#">
-                                    <a class="nav-link" href="test.html">test</a>
+                                    <a class="nav-link" href="http://localhost/web/Lien_he">Liên Hệ</a>
                                 </li>
-                                <li class="last"><a href="#"><img src="images/search-icon.png" alt="icon"></a></li>
+                                <!-- <li class="nav-item" href="#">
+                                    <a class="nav-link" href="test.html">test</a>
+                                </li> -->
+                                <!-- <li class="last"><a href="#"><img src="images/search-icon.png" alt="icon"></a></li> -->
                             </ul>
                         </div>
                     </nav>
@@ -89,18 +92,18 @@
                 </div>
             </div>
             <?php foreach ($noi_dung_tin_tuc as $row) {; ?>
-                <table border="2" style="margin-top : 10px;width:100%;">
+              <div style="border: 1px solid black; margin-top: 20px;"> <table  style="margin-top : 10px;width:100%;">
                     <tr>
                         <td colspan="1" rowspan="3" style="width: 30%; height:50px;"><img style="width: 100%; height:150px; " src="images/<?php echo $row->pic; ?>"></td>
                         <td style="max-width: 70%;">
                             <div>
-                                <h5><?php echo $row->tieude; ?>
+                                <h4 style="font-weight: bold;margin-left: 20px;"><?php echo $row->tieude; ?>
                             </div>
-                            </h5>
+                            </h4>
                         </td>
                     </tr>
                     <tr>
-                        <td style="max-width: 70%;">
+                        <td style="max-width: 70%; text-align: left;">
                             <div>
                                 <p><?php echo $row->mota; ?></p>
                             </div>
@@ -109,12 +112,14 @@
                     <tr>
                         <td>
                             <div style="max-width: 70%;">
-                                <p><?php echo $row->tacgia; ?></p>
+                                <p style="margin: 0px;padding: 0px; text-align: right;font-family: Arial; " ><?php echo $row->ngaytao; ?></p>
                             </div>
                         </td>
                     </tr>
                 </table>
+                </div> 
             <?php }; ?>
+
 
 
 
@@ -156,37 +161,8 @@
 
     <div class="lets_touch_main">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="input_main">
-                        <div class="container">
-                            <form action="/action_page.php">
-                                <div class="form-group">
-                                    <input type="text" class="email-bt" placeholder="Name" name="Name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="email-bt" placeholder="Email" name="Email">
-                                </div>
-                                <form action="/action_page.php">
-                                    <div class="form-group">
-                                        <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="text"></textarea>
-                                    </div>
-                                </form>
-                            </form>
-                        </div>
-                        <div class="send_btn">
-                            <button type="button" class="main_bt"><a href="#">Gửi</a></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="lorem_text">Text11</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.58836682679!2d105.82662451484147!3d21.009131393824166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac800f450807%3A0x419a49bcd94b693a!2zSOG7jWMgdmnhu4duIE5nw6JuIGjDoG5n!5e0!3m2!1svi!2s!4v1618157338221!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    
         </div>
     </div>
     <!--touch_section end -->

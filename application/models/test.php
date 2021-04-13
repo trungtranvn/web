@@ -12,7 +12,7 @@ class test extends CI_Model
     public function get_current_page_records($limit, $start) 
     {
         $this->db->limit($limit, $start);
-        $query = $this->db->get("tin_tuc");
+        $query = $this->db->get("tintuc");
  
         if ($query->num_rows() > 0) 
         {
@@ -29,6 +29,6 @@ class test extends CI_Model
      
     public function get_total() 
     {
-        return $this->db->count_all("tin_tuc");
+        return $this->db->count_all("tintuc");
     }
 }

@@ -52,26 +52,27 @@
                             <i class="fa fa-bars"></i>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
+                            <ul  class="navbar-nav mr-auto">
+                                <li  class="nav-item active">
                                     <a class="nav-link" href="http://localhost/web/trang_chu">Trang Chủ<span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item">
+                                <li  class="nav-item">
                                     <a class="nav-link" href="http://localhost/web/tin_tuc">Thông tin dịch bệnh</a>
                                 </li>
-                                <li class="nav-item">
+                                <li  class="nav-item">
                                     <a class="nav-link" href="http://localhost/web/Khai_bao ">Khai Báo Y Tế</a>
                                 </li>
-                                <li class="#" href="#">
+                                <li  class="#" href="#">
                                     <a class="nav-link" href="http://localhost/web/Diem_danh">Điểm danh</a>
                                 </li>
-                                <li class="nav-item" href="#">
+                                <li  class="nav-item" href="#">
+                                    <a class="nav-link" href="http://localhost/web/thongbaonguyco">Thông Báp Nguy Cơ</a>
+                                </li>
+                                <li  class="nav-item" href="#">
                                     <a class="nav-link" href="http://localhost/web/Lien_he">Liên Hệ</a>
                                 </li>
-                                <li class="nav-item" href="#">
-                                    <a class="nav-link" href="test.html">test</a>
-                                </li>
-                                <li class="last"><a href="#"><img src="images/search-icon.png" alt="icon"></a></li>
+         
+                                <!-- <li class="last"><a href="#"><img src="images/search-icon.png" alt="icon"></a></li> -->
                             </ul>
                         </div>
                     </nav>
@@ -89,34 +90,34 @@
                     <div class="carousel-item active">
                         <div class="titlepage-h1">
                             <h1 class="bnner_title">Welcome To<br>
-                                <span style="color: #10b5fa">Text1</span>
+                                <span style="color: #10b5fa">WEBSITE COVID-19 HỌC VIỆN NGÂN HÀNG</span>
                             </h1>
-                            <p class="long_text">text1 </p>
+                            <p class="long_text"> Để khai bao ý tế vui lòng nhấn </p>
                         </div>
                         <div class="btn_main">
-                            <button type="button" class="btn btn-dark btn-lg"><a href="contact.html">Contact</a></button>
+                            <button type="button" class="btn btn-dark btn-lg"><a href="http://localhost/web/Khai_bao">KHAI BÁO Y TẾ</a></button>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="titlepage-h1">
-                            <h1 class="bnner_title">Welcome To<br>
-                                <span style="color: #10b5fa">Text2</span>
+                            <h1 class="bnner_title">TIỆN ÍCH<br>
+                                <span style="color: #10b5fa">ĐIỂM DANH HỌC TẬP</span>
                             </h1>
-                            <p class="long_text">text2 </p>
+                            <p class="long_text">Điền đầy đủ thông tin để lưu lại kết quả điểm danh</p>
                         </div>
                         <div class="btn_main">
-                            <button type="button" class="btn btn-dark btn-lg">Contact</button>
+                            <button type="button" class="btn btn-dark btn-lg"><a href="http://localhost/web/Diem_danh">ĐIỂM DANH</a></button>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="titlepage-h1">
-                            <h1 class="bnner_title">Welcome To<br>
-                                <span style="color: #10b5fa">Text3</span>
+                            <h1 class="bnner_title">THÔNG TIN LIÊN HỆ<br>
+                                <span style="color: #10b5fa"></span>
                             </h1>
-                            <p class="long_text">text3</p>
+                            <p class="long_text">Xin vui lòng gửi cho chúng tôi mọi thông tin liên quan đến dịch bệnh</p>
                         </div>
                         <div class="btn_main">
-                            <button type="button" class="btn btn-dark btn-lg">Contact</button>
+                            <button type="button" class="btn btn-dark btn-lg"><a href="http://localhost/web/Lien_he">LIÊN HỆ</a></button>
                         </div>
                     </div>
                 </div>
@@ -134,10 +135,11 @@
     <div class="services_main">
         <div class="container">
             <div class="creative_taital">
-                <h1 class="creative_text">Text4</h1>
-                <p style="color: #050000; text-align: center;">text4</p>
+                <h1 class="creative_text">KHAI BÁO Ý TẾ TOÀN HỌC VIỆN</h1>
+                <p style="color: #050000; text-align: center;">Dữ liệu bạn cung cấp hoàn toàn bảo mật và chỉ phục vụ cho việc phòng chống dịch, thuộc quản lý của Ban chỉ đạo Học viện về Phòng chống dịch Covid-19. Khi bạn có bất kỳ thông tin nghi ngờ hay có nguy cơ mắc bệnh, xin vui lòng thông báo cho chúng tôi!
+</p>
                 <div class="btn_main">
-                    <button type="button" class="btn btn-dark btn-lg">Khai Bao Y Tế</button>
+                    <button type="button" class="btn btn-dark btn-lg"><a href="http://localhost/web/thongbaonguyco">THÔNG BÁO NGUY CƠ</a></button>
                 </div>
             </div>
             <div class="section_service_2">
@@ -151,18 +153,18 @@
                 </div>
             </div> -->
             <?php foreach ($noi_dung_tin_tuc as $row) {; ?>
-                <table border="2" style="margin-top : 10px;width:100%;">
+              <div style="border: 1px solid black; margin-top: 20px;"> <table  style="margin-top : 10px;width:100%;">
                     <tr>
                         <td colspan="1" rowspan="3" style="width: 30%; height:50px;"><img style="width: 100%; height:150px; " src="images/<?php echo $row->pic; ?>"></td>
                         <td style="max-width: 70%;">
                             <div>
-                                <h5><?php echo $row->tieude; ?>
+                                <h4 style="font-weight: bold;margin-left: 20px;"><?php echo $row->tieude; ?>
                             </div>
-                            </h5>
+                            </h4>
                         </td>
                     </tr>
                     <tr>
-                        <td style="max-width: 70%;">
+                        <td style="max-width: 70%; text-align: left;">
                             <div>
                                 <p><?php echo $row->mota; ?></p>
                             </div>
@@ -171,11 +173,12 @@
                     <tr>
                         <td>
                             <div style="max-width: 70%;">
-                                <p><?php echo $row->tacgia; ?></p>
+                                <p style="margin: 0px;padding: 0px; text-align: right;font-family: Arial; " ><?php echo $row->ngaytao; ?></p>
                             </div>
                         </td>
                     </tr>
                 </table>
+                </div> 
             <?php }; ?>
 
 
@@ -334,7 +337,7 @@
 
     <div class="touch_section">
         <div class="container">
-            <h1 class="touch_text">Let's Get In Touch!</h1>
+            <h1 class="touch_text">XIN CẢM ƠN!</h1>
         </div>
     </div>
 
