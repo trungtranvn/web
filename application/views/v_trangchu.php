@@ -340,37 +340,7 @@
 
     <div class="lets_touch_main">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="input_main">
-                        <div class="container">
-                            <form action="/action_page.php">
-                                <div class="form-group">
-                                    <input type="text" class="email-bt" placeholder="Name" name="Name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="email-bt" placeholder="Email" name="Email">
-                                </div>
-                                <form action="/action_page.php">
-                                    <div class="form-group">
-                                        <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="text"></textarea>
-                                    </div>
-                                </form>
-                            </form>
-                        </div>
-                        <div class="send_btn">
-                            <button type="button" class="main_bt"><a href="#">Gửi</a></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="lorem_text">Text11</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.58836682679!2d105.82662451484147!3d21.009131393824166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac800f450807%3A0x419a49bcd94b693a!2zSOG7jWMgdmnhu4duIE5nw6JuIGjDoG5n!5e0!3m2!1svi!2s!4v1618157338221!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
     <!--touch_section end -->

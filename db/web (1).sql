@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 13, 2021 lúc 10:28 AM
+-- Thời gian đã tạo: Th4 12, 2021 lúc 11:02 AM
 -- Phiên bản máy phục vụ: 10.4.17-MariaDB
 -- Phiên bản PHP: 8.0.2
 
@@ -20,31 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `web`
 --
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `diemdanh`
---
-
-CREATE TABLE `diemdanh` (
-  `iddiemdanh` int(11) NOT NULL,
-  `malop` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `tensv` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
-  `ca` int(11) DEFAULT NULL,
-  `ngayhoc` datetime DEFAULT current_timestamp(),
-  `phonghoc` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `masv` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `toanha` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
-  `monhoc` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Đang đổ dữ liệu cho bảng `diemdanh`
---
-
-INSERT INTO `diemdanh` (`iddiemdanh`, `malop`, `tensv`, `ca`, `ngayhoc`, `phonghoc`, `masv`, `toanha`, `monhoc`) VALUES
-(30, NULL, 'tran viet trung', 1, '2021-04-13 15:01:10', '401', '20a4040161', 'D1', 'toan cao cap');
 
 -- --------------------------------------------------------
 
@@ -806,12 +781,22 @@ CREATE TABLE `khaibao` (
   `idps` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
--- Đang đổ dữ liệu cho bảng `khaibao`
+-- Cấu trúc bảng cho bảng `lop`
 --
 
-INSERT INTO `khaibao` (`id`, `dilai`, `sot`, `ho`, `khotho`, `viemphoi`, `dauhong`, `metmoi`, `benh`, `nuocngoai`, `bieuhien`, `gan`, `mau`, `phoi`, `than`, `tim`, `huyetap`, `suygiam`, `gheptang`, `tieuduong`, `ungthu`, `thaiky`, `idps`) VALUES
-(2, 'khong', 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, NULL);
+CREATE TABLE `lop` (
+  `idlop` int(11) NOT NULL,
+  `malop` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `tenlop` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `ca` int(11) DEFAULT NULL,
+  `ngayhoc` datetime DEFAULT current_timestamp(),
+  `phonghoc` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `idps` int(11) DEFAULT NULL,
+  `toanha` varchar(20) CHARACTER SET utf8 DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -832,16 +817,8 @@ CREATE TABLE `pesson` (
   `tinhthanhpho` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `gioitinh` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `masv` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
-  `malop` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `namsinh` varchar(50) CHARACTER SET utf8 DEFAULT NULL
+  `malop` varchar(50) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Đang đổ dữ liệu cho bảng `pesson`
---
-
-INSERT INTO `pesson` (`idps`, `loaips`, `ten`, `lop`, `sdt`, `email`, `diachi`, `xaphuong`, `quanhuyen`, `tinhthanhpho`, `gioitinh`, `masv`, `malop`, `namsinh`) VALUES
-(1, NULL, 'tran viet trung', 'k20HTTTA', '0332764681', 'trungtran1906@gmail.com', 'abc', '09637', '271', '01', 'Nam', '20a4040161', NULL, '1999');
 
 -- --------------------------------------------------------
 
@@ -923,32 +900,6 @@ INSERT INTO `province` (`province_id`, `province_name`, `type`) VALUES
 ('94', 'Tỉnh Sóc Trăng', 'Tỉnh'),
 ('95', 'Tỉnh Bạc Liêu', 'Tỉnh'),
 ('96', 'Tỉnh Cà Mau', 'Tỉnh');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `sqlite_master`
---
-
-CREATE TABLE `sqlite_master` (
-  `type` text DEFAULT NULL,
-  `name` text DEFAULT NULL,
-  `tbl_name` text DEFAULT NULL,
-  `rootpage` int(11) DEFAULT NULL,
-  `sql` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Đang đổ dữ liệu cho bảng `sqlite_master`
---
-
-INSERT INTO `sqlite_master` (`type`, `name`, `tbl_name`, `rootpage`, `sql`) VALUES
-('table', 'district', 'district', 2, 'CREATE TABLE `district` (\r\n  `id` TEXT  NOT NULL,\r\n  `name` TEXT  NOT NULL,\r\n  `type` TEXT  NOT NULL,\r\n  `province_id` TEXT  NOT NULL,\r\n  PRIMARY KEY (`id`)\r\n)'),
-('index', 'sqlite_autoindex_district_1', 'district', 3, NULL),
-('table', 'province', 'province', 4, 'CREATE TABLE `province` (\r\n  `id` TEXT  NOT NULL,\r\n  `name` TEXT  NOT NULL,\r\n  `type` TEXT  NOT NULL,\r\n  PRIMARY KEY (`id`)\r\n)'),
-('index', 'sqlite_autoindex_province_1', 'province', 5, NULL),
-('table', 'ward', 'ward', 6, 'CREATE TABLE `ward` (\r\n  `id` TEXT  NOT NULL,\r\n  `name` TEXT  NOT NULL,\r\n  `type` TEXT  NOT NULL,\r\n  `district_id` TEXT  NOT NULL,\r\n  PRIMARY KEY (`id`)\r\n)'),
-('index', 'sqlite_autoindex_ward_1', 'ward', 7, NULL);
 
 -- --------------------------------------------------------
 
@@ -12195,13 +12146,6 @@ INSERT INTO `ward` (`ward_id`, `ward_name`, `type`, `district_id`) VALUES
 --
 
 --
--- Chỉ mục cho bảng `diemdanh`
---
-ALTER TABLE `diemdanh`
-  ADD PRIMARY KEY (`iddiemdanh`),
-  ADD KEY `lop_pesson_idps_fk` (`masv`);
-
---
 -- Chỉ mục cho bảng `district`
 --
 ALTER TABLE `district`
@@ -12213,6 +12157,13 @@ ALTER TABLE `district`
 ALTER TABLE `khaibao`
   ADD PRIMARY KEY (`id`),
   ADD KEY `khaibao_pesson_idps_fk` (`idps`);
+
+--
+-- Chỉ mục cho bảng `lop`
+--
+ALTER TABLE `lop`
+  ADD PRIMARY KEY (`idlop`),
+  ADD KEY `lop_pesson_idps_fk` (`idps`);
 
 --
 -- Chỉ mục cho bảng `pesson`
@@ -12237,22 +12188,22 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT cho bảng `diemdanh`
---
-ALTER TABLE `diemdanh`
-  MODIFY `iddiemdanh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
---
 -- AUTO_INCREMENT cho bảng `khaibao`
 --
 ALTER TABLE `khaibao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `lop`
+--
+ALTER TABLE `lop`
+  MODIFY `idlop` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `pesson`
 --
 ALTER TABLE `pesson`
-  MODIFY `idps` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idps` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `tintuc`
@@ -12275,6 +12226,12 @@ ALTER TABLE `user`
 --
 ALTER TABLE `khaibao`
   ADD CONSTRAINT `khaibao_pesson_idps_fk` FOREIGN KEY (`idps`) REFERENCES `pesson` (`idps`);
+
+--
+-- Các ràng buộc cho bảng `lop`
+--
+ALTER TABLE `lop`
+  ADD CONSTRAINT `lop_pesson_idps_fk` FOREIGN KEY (`idps`) REFERENCES `pesson` (`idps`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

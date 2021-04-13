@@ -27,9 +27,9 @@
   <!-- Tweaks for older IEs-->
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
   <!-- owl stylesheets -->
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <!-- <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen"> -->
 
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
@@ -89,286 +89,60 @@
       <h1 class="service_text">Thông tin khai báo ý tế</h1>
     </div>
     <div class="main-block">
-      <form action="/">
+      <form action="Khai_bao/savedata" class="khaibao" method="POST">
         <div>
           <h1>Thông tin cá nhân</h1>
           <div style="width:50%; float:left;">
             <h4>Họ tên</h4>
-            <input type="text" />
+            <input name="ten" type="text" />
           </div>
           <div style="width:50%; float:left;">
             <h4>Mã sinh viên</h4>
-            <input type="text" />
+            <input name="masv" type="text" />
           </div>
           <div style="width:50%; float:left;">
             <h4>Lớp niên chế</h4>
-            <input type="text" />
+            <input name="lop" type="text" />
           </div>
           <div style="width:50%; float:left;">
             <h4>Số điện thoại</h4>
-            <input type="text" />
+            <input name="sdt" type="text" />
           </div>
           <!-- <h4>Giới tính</h4> -->
           <div class="form-group form-inline box-gaden " style="width:50%;float:left;"> <label>Giới tính <em style="line-height: 1">(*)</em></label>
-
-            <select style="background-color: white;" name="fields[gender]" class="form-control inline-block form-inline input-year" data-msg-required="Bạn chưa chọn giới tính">
+            <select name="gioitinh">
               <option value="">Chọn</option>
+              <option value="Nam" <?= set_select('gioitinh', 'Nam') ?>>Nam</option>
+              <option value="Nữ" <?= set_select('gioitinh', 'Nữ') ?>>Nữ</option>
+              <option value="Khác" <?= set_select('gioitinh', 'Khác') ?>>Khác</option>
+            </select>
+            <!-- <select style="background-color: white;" name="gioitinh" class="form-control inline-block form-inline input-year" data-msg-required="Bạn chưa chọn giới tính">
+            <option value="">Chọn</option>
+             
+              
               <option value="Nam">Nam</option>
               <option value="Nu">Nữ</option>
               <option value="Khac">Khác</option>
-            </select>
+            </select> -->
           </div>
           <!-- <input type="checkbox" name="gioitinh" /> -->
           <!-- <h5>năm sinh</h5> -->
           <div style="float: left;width: 50%;" class="form-group form-inline gender-box "> <label>Năm sinh <em style="line-height: 1">(*)</em></label>
-
-            <select style="background-color: white;" class="input-text form-control input-year" data-msg-required="Bạn chưa chọn năm sinh" name="fields[birthYear]">
-
-              <option value="2021">2021</option>
-
-              <option value="2020">2020</option>
-
-              <option value="2019">2019</option>
-
-              <option value="2018">2018</option>
-
-              <option value="2017">2017</option>
-
-              <option value="2016">2016</option>
-
-              <option value="2015">2015</option>
-
-              <option value="2014">2014</option>
-
-              <option value="2013">2013</option>
-
-              <option value="2012">2012</option>
-
-              <option value="2011">2011</option>
-
-              <option value="2010">2010</option>
-
-              <option value="2009">2009</option>
-
-              <option value="2008">2008</option>
-
-              <option value="2007">2007</option>
-
-              <option value="2006">2006</option>
-
-              <option value="2005">2005</option>
-
-              <option value="2004">2004</option>
-
-              <option value="2003">2003</option>
-
-              <option value="2002">2002</option>
-
-              <option value="2001">2001</option>
-
-              <option value="2000">2000</option>
-
-              <option value="1999">1999</option>
-
-              <option value="1998">1998</option>
-
-              <option value="1997">1997</option>
-
-              <option value="1996">1996</option>
-
-              <option value="1995">1995</option>
-
-              <option value="1994">1994</option>
-
-              <option value="1993">1993</option>
-
-              <option value="1992">1992</option>
-
-              <option value="1991">1991</option>
-
-              <option value="1990">1990</option>
-
-              <option value="1989">1989</option>
-
-              <option value="1988">1988</option>
-
-              <option value="1987">1987</option>
-
-              <option value="1986">1986</option>
-
-              <option value="1985">1985</option>
-
-              <option value="1984">1984</option>
-
-              <option value="1983">1983</option>
-
-              <option value="1982">1982</option>
-
-              <option value="1981">1981</option>
-
-              <option value="1980">1980</option>
-
-              <option value="1979">1979</option>
-
-              <option value="1978">1978</option>
-
-              <option value="1977">1977</option>
-
-              <option value="1976">1976</option>
-
-              <option value="1975">1975</option>
-
-              <option value="1974">1974</option>
-
-              <option value="1973">1973</option>
-
-              <option value="1972">1972</option>
-
-              <option value="1971">1971</option>
-
-              <option value="1970">1970</option>
-
-              <option value="1969">1969</option>
-
-              <option value="1968">1968</option>
-
-              <option value="1967">1967</option>
-
-              <option value="1966">1966</option>
-
-              <option value="1965">1965</option>
-
-              <option value="1964">1964</option>
-
-              <option value="1963">1963</option>
-
-              <option value="1962">1962</option>
-
-              <option value="1961">1961</option>
-
-              <option value="1960">1960</option>
-
-              <option value="1959">1959</option>
-
-              <option value="1958">1958</option>
-
-              <option value="1957">1957</option>
-
-              <option value="1956">1956</option>
-
-              <option value="1955">1955</option>
-
-              <option value="1954">1954</option>
-
-              <option value="1953">1953</option>
-
-              <option value="1952">1952</option>
-
-              <option value="1951">1951</option>
-
-              <option value="1950">1950</option>
-
-              <option value="1949">1949</option>
-
-              <option value="1948">1948</option>
-
-              <option value="1947">1947</option>
-
-              <option value="1946">1946</option>
-
-              <option value="1945">1945</option>
-
-              <option value="1944">1944</option>
-
-              <option value="1943">1943</option>
-
-              <option value="1942">1942</option>
-
-              <option value="1941">1941</option>
-
-              <option value="1940">1940</option>
-
-              <option value="1939">1939</option>
-
-              <option value="1938">1938</option>
-
-              <option value="1937">1937</option>
-
-              <option value="1936">1936</option>
-
-              <option value="1935">1935</option>
-
-              <option value="1934">1934</option>
-
-              <option value="1933">1933</option>
-
-              <option value="1932">1932</option>
-
-              <option value="1931">1931</option>
-
-              <option value="1930">1930</option>
-
-              <option value="1929">1929</option>
-
-              <option value="1928">1928</option>
-
-              <option value="1927">1927</option>
-
-              <option value="1926">1926</option>
-
-              <option value="1925">1925</option>
-
-              <option value="1924">1924</option>
-
-              <option value="1923">1923</option>
-
-              <option value="1922">1922</option>
-
-              <option value="1921">1921</option>
-
-              <option value="1920">1920</option>
-
-              <option value="1919">1919</option>
-
-              <option value="1918">1918</option>
-
-              <option value="1917">1917</option>
-
-              <option value="1916">1916</option>
-
-              <option value="1915">1915</option>
-
-              <option value="1914">1914</option>
-
-              <option value="1913">1913</option>
-
-              <option value="1912">1912</option>
-
-              <option value="1911">1911</option>
-
-              <option value="1910">1910</option>
-
-              <option value="1909">1909</option>
-
-              <option value="1908">1908</option>
-
-              <option value="1907">1907</option>
-
-              <option value="1906">1906</option>
-
-              <option value="1905">1905</option>
-
-              <option value="1904">1904</option>
-
-              <option value="1903">1903</option>
-
-              <option value="1902">1902</option>
-
-              <option value="1901">1901</option>
-
-              <option value="1900">1900</option>
-
+            <select name="namsinh">
+              <option value="">Chọn</option>
+              <option value="2005" <?= set_select('namsinh', '2005') ?>>2005</option>
+              <option value="2004" <?= set_select('namsinh', '2004') ?>>2004</option>
+              <option value="2003" <?= set_select('namsinh', '2003') ?>>2003</option>
+              <option value="2002" <?= set_select('namsinh', '2002') ?>>2002</option>
+              <option value="2001" <?= set_select('namsinh', '2001') ?>>2001</option>
+              <option value="2000" <?= set_select('namsinh', '2000') ?>>2000</option>
+              <option value="1999" <?= set_select('namsinh', '1999') ?>>1999</option>
+              <option value="1998" <?= set_select('namsinh', '1998') ?>>1998</option>
+              <option value="1997" <?= set_select('namsinh', '1997') ?>>1997</option>
+              <option value="1996" <?= set_select('namsinh', '1996') ?>>1996</option>
+              <option value="1995" <?= set_select('namsinh', '1995') ?>>1995</option>
             </select>
+
           </div>
         </div>
 
@@ -378,7 +152,7 @@
             <option value="">Chọn Thành Phố</option>
             <?php
             foreach ($province as $row) {
-              echo '<option value="' . $row->province_id . '">' . $row->province_name . '</option>';
+              echo '<option value="' . $row->province_id . '"<?= set_select(' . 'province' . ', ' . $row->province_id . ') ?> ' . $row->province_name . '</option>';
             } ?>
           </select>
         </div>
@@ -396,19 +170,19 @@
 
         <div style=" float:left;width:100%;">
           <h4>Số nhà, phố, tổ dân phố/thôn/đội (*)</h4>
-          <input type="text" />
+          <input name="diachi" type="text" />
         </div>
         <div style=" float:left;width:50%;">
           <h4 style=" float:left;width:50%;">Điện thoại</h4>
-          <input type="text" />
+          <input name="sdt" type="text" />
         </div>
         <div style=" float:left;width:50%;">
           <h4 style=" float:left;width:50%;">Email</h4>
-          <input type="text" />
+          <input name="email" type="text" />
         </div>
         <div style=" float:left;width:100%;">
           <h4>Trong vòng 14 ngày qua, anh chị có đến tỉnh/thành phố, quốc gia/vùng lãnh thổ nào (Có thể đi qua nhiều nơi) (*)</h4>
-          <input type="text" />
+          <input name="dilai" type="text" />
         </div>
     </div>
     <div style="padding: 20px; 	border: 1px solid #072833;">
@@ -423,33 +197,45 @@
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Sốt</td>
-          <td><input type="radio" value="none" name="sot" /></td>
-          <td><input type="radio" value="none" name="ksot" /></td>
+          <td><input type="radio" name="sot" value="1" <?= set_radio('sot', '1') ?> /></td>
+          <td><input type="radio" name="sot" value="2" <?= set_radio('sot', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="sot" /></td>
+          <td><input type="radio" value="2" name="sot" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Ho</td>
-          <td><input type="radio" value="none" name="ho" /></td>
-          <td><input type="radio" value="none" name="ho" /></td>
+          <td><input type="radio" name="ho" value="1" <?= set_radio('ho', '1') ?> /></td>
+          <td><input type="radio" name="ho" value="2" <?= set_radio('ho', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="ho" /></td>
+          <td><input type="radio" value="2" name="ho" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Khó thở</td>
-          <td><input type="radio" value="none" name="khotho" /></td>
-          <td><input type="radio" value="none" name="khotho" /></td>
+          <td><input type="radio" name="khotho" value="1" <?= set_radio('khotho', '1') ?> /></td>
+          <td><input type="radio" name="khotho" value="2" <?= set_radio('khotho', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="khotho" /></td>
+          <td><input type="radio" value="2" name="khotho" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Viêm phổi</td>
-          <td><input type="radio" value="none" name="viemphoi" /></td>
-          <td><input type="radio" value="none" name="viemphoi" /></td>
+          <td><input type="radio" name="viemphoi" value="1" <?= set_radio('viemphoi', '1') ?> /></td>
+          <td><input type="radio" name="viemphoi" value="2" <?= set_radio('viemphoi', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="viemphoi" /></td>
+          <td><input type="radio" value="2" name="viemphoi" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Đau họng</td>
-          <td><input type="radio" value="none" name="dauhong" /></td>
-          <td><input type="radio" value="none" name="dauhong" /></td>
+          <td><input type="radio" name="dauhong" value="1" <?= set_radio('dauhong', '1') ?> /></td>
+          <td><input type="radio" name="dauhong" value="2" <?= set_radio('dauhong', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="dauhong" /></td>
+          <td><input type="radio" value="2" name="dauhong" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Mệt Mỏi</td>
-          <td><input type="radio" value="none" name="metmoi" /></td>
-          <td><input type="radio" value="none" name="metmoi" /></td>
+          <td><input type="radio" name="metmoi" value="1" <?= set_radio('metmoi', '1') ?> /></td>
+          <td><input type="radio" name="metmoi" value="2" <?= set_radio('metmoi', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="metmoi" /></td>
+          <td><input type="radio" value="2" name="metmoi" /></td> -->
         </tr>
       </table>
     </div>
@@ -465,18 +251,24 @@
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Người từ nước ngoài có bênh COVID-19</td>
-          <td><input type="radio" value="none" name="benh" /></td>
-          <td><input type="radio" value="none" name="benh" /></td>
+          <td><input type="radio" name="nuocngoai" value="1" <?= set_radio('benh', '1') ?> /></td>
+          <td><input type="radio" name="nuocngoai" value="2" <?= set_radio('benh', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="benh" /></td>
+          <td><input type="radio" value="2" name="benh" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Người có biểu hiện(Sốt,ho,khó thở, viêm phổi)</td>
-          <td><input type="radio" value="none" name="bieuhien" /></td>
-          <td><input type="radio" value="none" name="bieuhien" /></td>
+          <td><input type="radio" name="bieuhien" value="1" <?= set_radio('bieuhien', '1') ?> /></td>
+          <td><input type="radio" name="bieuhien" value="2" <?= set_radio('bieuhien', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="bieuhien" /></td>
+          <td><input type="radio" value="2" name="bieuhien" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Người bệnh hoặc nghi ngời,mắc bệnh COVID-19</td>
-          <td><input type="radio" value="none" name="nghingo" /></td>
-          <td><input type="radio" value="none" name="nghingo" /></td>
+          <td><input type="radio" name="benh" value="1" <?= set_radio('nghingo', '1') ?> /></td>
+          <td><input type="radio" name="benh" value="2" <?= set_radio('nghingo', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="nghingo" /></td>
+          <td><input type="radio" value="2" name="nghingo" /></td> -->
         </tr>
       </table>
     </div>
@@ -492,53 +284,73 @@
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Bệnh gan mãn tính</td>
-          <td><input type="radio" value="none" name="gan" /></td>
-          <td><input type="radio" value="none" name="gan" /></td>
+          <td><input type="radio" name="gan" value="1" <?= set_radio('gan', '1') ?> /></td>
+          <td><input type="radio" name="gan" value="2" <?= set_radio('gan', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="gan" /></td>
+          <td><input type="radio" value="2" name="gan" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Bệnh máu mãn tính</td>
-          <td><input type="radio" value="none" name="mau" /></td>
-          <td><input type="radio" value="none" name="mau" /></td>
+          <td><input type="radio" name="mau" value="1" <?= set_radio('mau', '1') ?> /></td>
+          <td><input type="radio" name="mau" value="2" <?= set_radio('mau', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="mau" /></td>
+          <td><input type="radio" value="2" name="mau" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Bệnh phổi mãn tính</td>
-          <td><input type="radio" value="none" name="phoi" /></td>
-          <td><input type="radio" value="none" name="phoi" /></td>
+          <td><input type="radio" name="phoi" value="1" <?= set_radio('phoi', '1') ?> /></td>
+          <td><input type="radio" name="phoi" value="2" <?= set_radio('phoi', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="phoi" /></td>
+          <td><input type="radio" value="2" name="phoi" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Bệnh thận mãn tính</td>
-          <td><input type="radio" value="none" name="than" /></td>
-          <td><input type="radio" value="none" name="than" /></td>
+          <td><input type="radio" name="than" value="1" <?= set_radio('than', '1') ?> /></td>
+          <td><input type="radio" name="than" value="2" <?= set_radio('than', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="than" /></td>
+          <td><input type="radio" value="2" name="than" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Bệnh tim mạch</td>
-          <td><input type="radio" value="none" name="tim" /></td>
-          <td><input type="radio" value="none" name="tim" /></td>
+          <td><input type="radio" name="tim" value="1" <?= set_radio('tim', '1') ?> /></td>
+          <td><input type="radio" name="tim" value="2" <?= set_radio('tim', '2', TRUE) ?> /></td>
+         <!-- <td><input type="radio" value="1" name="tim" /></td>
+          <td><input type="radio" value="2" name="tim" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Huyết áp cao</td>
-          <td><input type="radio" value="none" name="huyetap" /></td>
-          <td><input type="radio" value="none" name="huyetap" /></td>
+          <td><input type="radio" name="huyetap" value="1" <?= set_radio('huyetap', '1') ?> /></td>
+          <td><input type="radio" name="huyetap" value="2" <?= set_radio('huyetap', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="huyetap" /></td>
+          <td><input type="radio" value="2" name="huyetap" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Suy giảm miễn dịch</td>
-          <td><input type="radio" value="none" name="suygiam" /></td>
-          <td><input type="radio" value="none" name="suygiam" /></td>
+          <td><input type="radio" name="suygiam" value="1" <?= set_radio('suygiam', '1') ?> /></td>
+          <td><input type="radio" name="suygiam" value="2" <?= set_radio('suygiam', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="suygiam" /></td>
+          <td><input type="radio" value="2" name="suygiam" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Người nhận ghép tạng, Thủy xương</td>
-          <td><input type="radio" value="none" name="gheptang" /></td>
-          <td><input type="radio" value="none" name="gheptang" /></td>
+          <td><input type="radio" name="gheptang" value="1" <?= set_radio('gheptang', '1') ?> /></td>
+          <td><input type="radio" name="gheptang" value="2" <?= set_radio('gheptang', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="gheptang" /></td>
+          <td><input type="radio" value="2" name="gheptang" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Tiểu đường</td>
-          <td><input type="radio" value="none" name="tieuduong" /></td>
-          <td><input type="radio" value="none" name="tieuduong" /></td>
+          <td><input type="radio" name="tieuduong" value="1" <?= set_radio('tieuduong', '1') ?> /></td>
+          <td><input type="radio" name="tieuduong" value="2" <?= set_radio('tieuduong', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="tieuduong" /></td>
+          <td><input type="radio" value="2" name="tieuduong" /></td> -->
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Ung thư</td>
-          <td><input type="radio" value="none" name="ungthu" /></td>
-          <td><input type="radio" value="none" name="ungthu" /></td>
+          <td><input type="radio" name="ungthu" value="1" <?= set_radio('ungthu', '1') ?> /></td>
+          <td><input type="radio" name="ungthu" value="2" <?= set_radio('ungthu', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="ungthu" /></td>
+          <td><input type="radio" value="2" name="ungthu" /></td> -->
         </tr>
       </table>
     </div>
@@ -554,8 +366,10 @@
         </tr>
         <tr>
           <td style="padding-left: 20px;" class="first-col">Bạn có đang trong thời gian thai kỳ hay không</td>
-          <td><input type="radio" value="none" name="thaiky" /></td>
-          <td><input type="radio" value="none" name="thaiky" /></td>
+          <td><input type="radio" name="thaiky" value="1" <?= set_radio('thaiky', '1') ?> /></td>
+          <td><input type="radio" name="thaiky" value="2" <?= set_radio('thaiky', '2', TRUE) ?> /></td>
+          <!-- <td><input type="radio" value="1" name="thaiky" /></td>
+          <td><input type="radio" value="2" name="thaiky" /></td> -->
         </tr>
       </table>
     </div>
